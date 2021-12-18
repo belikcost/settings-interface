@@ -6,6 +6,7 @@ import SitesSettings from "./components/SitesSettings";
 import EditorsNavigation from "./components/EditorsNavigation";
 
 import './App.scss';
+import SettingsStore from "./domain/SettingsStore";
 
 const SITES = [
     {
@@ -23,6 +24,8 @@ const SITES = [
 ];
 
 const AUDIO_COLLECTIONS = ["Test", "Test2"];
+
+const settingsStore = new SettingsStore();
 
 const App = () => {
 

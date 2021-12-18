@@ -38,6 +38,10 @@
 
 .sites-settings__slider {
   .swiper-wrapper {
-    padding: 336px 0 54px;
+    padding: 336px 0 78px;
+  }
+
+  .swiper-pagination {
+    z-index: 1;
   }
 }
