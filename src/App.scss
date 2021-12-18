@@ -1,0 +1,13 @@
+.app {
+  display: flex;
+
+  &__main {
+    width: 70%;
+
+    margin-right: 98px;
+  }
+
+  &__sidebar {
+    width: 30%;
+  }
+}

@@ -1,4 +1,5 @@
 @import "src/assets/styles/mixins";
+@import "src/assets/styles/vars";
 
 .input {
   &_default, &_blue {
@@ -7,5 +8,24 @@
 
   &_blue {
     background-color: $extra-light-blue;
+  }
+
+  &_small {
+    font-size: 23px;
+    color: $dark-blue;
+
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+
+    &-text {
+      @include text;
+      margin: 0 0 4px;
+    }
   }
 }

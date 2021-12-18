@@ -8,14 +8,13 @@
   right: 20px;
 }
 
-.select {
+.select-normal, .select-small {
   position: relative;
 
   cursor: pointer;
 
   &_option, &__selected-option {
     @include field;
-    padding: 34px 68px;
 
     color: $option-text-color;
   }
@@ -57,5 +56,42 @@
     @include field-border;
     border-top: none;
     border-radius: 0 0 15px 15px;
+  }
+
+  &__label-text {
+    @include text;
+    margin: 0 0 4px;
+  }
+}
+
+.select-normal {
+  &_option, &__selected-option {
+    padding: 34px 68px;
+  }
+}
+
+.select-small {
+
+  &_option, &__selected-option {
+    border: none;
+    border-radius: 5px;
+
+    padding: 8px 16px;
+
+    font-size: 19px;
+
+    background-color: #F9FAFC;
+  }
+
+  &__options-list {
+    margin-top: -5px;
+
+    border: none;
+  }
+
+  &__arrow-down, &__arrow-up {
+    width: 28px;
+    height: 14px;
+    top: 12px;
   }
 }

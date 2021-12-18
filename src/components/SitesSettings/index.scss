@@ -1,0 +1,43 @@
+@import "src/assets/styles/vars";
+
+.sites-settings {
+  background-color: $site-settings-background;
+
+  border-radius: 15px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 20px 0;
+  }
+
+  &__body {
+    padding: 20px;
+  }
+
+  &__footer {
+    padding: 0 20px 20px;
+
+    border-top: 2px dashed $site-settings-color;
+  }
+
+  &__graffiti {
+    width: 70%;
+
+    display: block;
+
+    margin: 36px auto 20px;
+  }
+
+  &_icon {
+    fill: $site-settings-color;
+    cursor: pointer;
+  }
+}
+
+.sites-settings__slider {
+  .swiper-wrapper {
+    padding: 336px 0 54px;
+  }
+}

@@ -2,7 +2,7 @@ import React from "react";
 
 import Select from "../../primitives/Select";
 import Input from "../../primitives/Input";
-import { InputTypeEnums, InputVariantEnums } from "../../enums";
+import { InputTypeEnums, InputVariantEnums, SelectVariantEnums } from "../../enums";
 
 import './index.scss';
 
@@ -37,6 +37,7 @@ const Configuration = () => {
                     <p className="configuration_subtitle">Выберите или создайте настройки</p>
                 </div>
                 <Select
+                    variant={SelectVariantEnums.normal}
                     selectedOption={SETTINGS_OPTIONS[0]}
                     options={SETTINGS_OPTIONS}
                     onSelect={onSelectConfig}

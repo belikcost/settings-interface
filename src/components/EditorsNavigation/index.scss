@@ -1,0 +1,52 @@
+@import "src/assets/styles/vars";
+
+.editors-navigation {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #F6F6FF;
+  border-radius: 30px;
+
+  width: 70%;
+  margin: 0 auto -350px;
+
+  background: $white;
+
+  box-shadow: 0 30px 30px #8D8C8C29;
+
+  &__line {
+    position: absolute;
+    top: -10px;
+
+    align-self: center;
+
+    width: 88px;
+    height: 10px;
+
+    background-color: $editors-navigation-line-color;
+  }
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    padding: 84px 0;
+
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 2px dashed #A4AABA;
+    }
+  }
+
+  &_icon {
+    margin-bottom: 20px;
+  }
+}

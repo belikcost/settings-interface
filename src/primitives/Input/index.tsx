@@ -10,16 +10,20 @@ interface IInput {
     onChange: (changedValue: string) => void;
     width?: string | number;
     variant?: InputVariantEnums;
+    labelText?: string;
 }
 
-const Input = ({ type, value, onChange, width, variant }: IInput) => {
+const Input = ({ type, value, onChange, width, variant, labelText }: IInput) => {
 
     const callWithEventTargetValue = useCallback(
         (callback) => (e: ChangeEvent<HTMLInputElement>) => callback(e.target.value), []
     );
 
     return (
-        <label>
+        <label className="input__label">
+            {labelText && (
+                <p className="input__label-text">{labelText}</p>
+            )}
             <input
                 className={`input_${variant || 'default'}`}
                 value={value}
