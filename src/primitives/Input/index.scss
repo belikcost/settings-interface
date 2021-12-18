@@ -1,0 +1,11 @@
+@import "src/assets/styles/mixins";
+
+.input {
+  &_default, &_blue {
+    @include field;
+  }
+
+  &_blue {
+    background-color: $extra-light-blue;
+  }
+}

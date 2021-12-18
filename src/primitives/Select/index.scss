@@ -1,0 +1,61 @@
+@import "src/assets/styles/mixins";
+@import "src/assets/styles/vars";
+
+%arrow {
+  fill: $light-blue;
+
+  position: absolute;
+  right: 20px;
+}
+
+.select {
+  position: relative;
+
+  cursor: pointer;
+
+  &_option, &__selected-option {
+    @include field;
+    padding: 34px 68px;
+
+    color: $option-text-color;
+  }
+
+  &_option {
+    border: none;
+    border-radius: 0;
+
+    &:hover {
+      color: $hover-option-text-color;
+      background-color: $hover-option-color;
+    }
+  }
+
+  &__selected-option {
+    position: relative;
+  }
+
+  &__arrow-down {
+    @extend %arrow;
+    transform: rotate(90deg);
+  }
+
+  &__arrow-up {
+    @extend %arrow;
+    transform: rotate(-90deg);
+  }
+
+  &__options-list {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    margin-top: -14px;
+
+    width: 100%;
+    background-color: $white;
+
+    @include field-border;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+  }
+}

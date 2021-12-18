@@ -1,0 +1,69 @@
+@import "src/assets/styles/vars";
+@import "src/assets/styles/mixins";
+
+.configuration {
+  &_title {
+    @include title;
+    margin: 0;
+  }
+
+  &_subtitle {
+    @include text;
+  }
+
+  &__save {
+    width: 100%;
+
+    font-size: 33px;
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+
+    background-color: $save-button-color;
+
+    border-radius: 15px;
+    border: none;
+
+    padding: 42px 0;
+
+    cursor: pointer;
+  }
+}
+
+.domain {
+  margin: 52px 0;
+}
+
+.choose-config {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 52px 0;
+}
+
+.stopping-time {
+  display: flex;
+  justify-content: space-between;
+
+  &_separation {
+    background-color: $dark-blue;
+
+    width: 29px;
+    height: 3px;
+
+    margin: 0 28px;
+  }
+
+  &_row {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 52px;
+  }
+
+  &_column {
+    display: flex;
+    flex-direction: column;
+  }
+}

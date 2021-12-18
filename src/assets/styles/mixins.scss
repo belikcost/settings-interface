@@ -1,0 +1,36 @@
+@import "vars";
+
+@mixin text {
+  color: $light-blue;
+  font-size: 20px;
+}
+
+@mixin title {
+  color: $dark-blue;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+@mixin field-border {
+  border: 2px solid $dark-white;
+  border-radius: 15px;
+}
+
+@mixin field {
+  @include field-border;
+  outline: none;
+
+  color: $dark-blue;
+  font-size: 28px;
+  font-weight: bold;
+
+  text-align: center;
+
+  padding: 34px 12px;
+
+  &:focus {
+    border-color: $focus-field-border-color;
+    background-color: $focus-field-color;
+    color: $focus-field-text-color;
+  }
+}

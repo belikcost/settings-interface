@@ -1,0 +1,83 @@
+@import "src/assets/styles/vars";
+@import "src/assets/styles/mixins";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.duration {
+  display: flex;
+
+  &_block {
+    display: flex;
+  }
+
+  &_separation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-item {
+      width: 5px;
+      height: 5px;
+
+      background-color: $duration_item_color;
+
+      margin: 2px 9px;
+    }
+  }
+
+  &_item {
+    background-color: $duration_item_color;
+
+    color: $white;
+    font-size: 34px;
+    font-weight: bold;
+
+    border-radius: 7px;
+
+    padding: 14px;
+
+    &:first-child {
+      margin-right: 3px;
+    }
+  }
+
+  &__description {
+    @include text;
+    margin: 4px 0;
+  }
+}
+
+.logo {
+  display: flex;
+
+  text-decoration: none;
+
+  &__icon {
+    width: 77px;
+    height: 77px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $logo-color;
+    fill: $white;
+
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  &__text {
+    font-size: 36px;
+    font-weight: 400;
+    color: $logo-text-color;
+
+    &-bold {
+      font-family: "Proxima Nova Cn Bl", sans-serif;
+    }
+  }
+}
